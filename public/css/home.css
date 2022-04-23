@@ -1,0 +1,91 @@
+body{
+    background-color: #f9f9f9 !important;
+}
+.card{
+  border:0px;
+  border-radius: 0px;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.1) !important;
+}
+.card-title{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #F3752B !important;
+}
+.color-primario{
+  font-size: 20px;
+  font-weight: bold;
+  color: #F3752B !important;
+}
+ol, ul {
+padding-left: 0rem !important;
+}
+.property-specs {
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: .1em;
+}
+.property-specs-wrap {
+  list-style: none;
+}
+#etiquetaRecomendado, #etiquetaDestacado {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  z-index: 2;
+}
+#etiquetaDestacado span {
+  background-color: #F3752B !important;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+#etiquetaRecomendado span {
+  background-color: rgb(255, 183, 47) !important;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+#etiquetaRecomendado, #etiquetaDestacado {
+  display: block;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+@keyframes hoverminiProducto {
+  50%  {
+    transform: scale(1.05);
+  }
+}
+.card:hover{
+  cursor: pointer;
+  animation-name: hoverminiProducto;
+  animation-duration: 0.7s;
+}
+
+/**estelizando input tipo file*/
+.form-upload{
+  background:#F9F9F9;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.input-personalizado{
+  cursor: pointer;
+  color: crimson;
+  font-weight: bold;
+}
+
+.imagem{
+  max-width: 100%;
+}
+
+.input-file{
+  display:none;
+}
+
