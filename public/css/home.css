@@ -89,3 +89,29 @@ padding-left: 0rem !important;
   display:none;
 }
 
+
+@media (min-width: 768px){
+  .row-cols-md-3>* {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+}
+
+@media (min-width: 768px){
+.row-cols-md-3>* {
+    flex: 0 0 auto;
+    width: 25%;
+}
+}
+
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 95% !important;
+    padding: 5px 30px;
+}
+}
+
+.mi-wold{
+  font-weight: 800;
+}
