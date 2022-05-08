@@ -1,5 +1,5 @@
 body{
-    background-color: #f9f9f9 !important;
+  background-color: #fff !important;
 }
 .card{
   border:0px;
@@ -108,10 +108,13 @@ padding-left: 0rem !important;
 @media (min-width: 1200px){
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 95% !important;
-    padding: 5px 30px;
+    padding: 50px 30px;
 }
 }
 
 .mi-wold{
   font-weight: 800;
+}
+.pd-special{
+  padding: 15px 50px;
 }

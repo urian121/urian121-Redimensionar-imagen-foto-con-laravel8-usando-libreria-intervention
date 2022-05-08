@@ -32,8 +32,8 @@
               <label for="estatus" class="form-label">Estatus</label>
               <select name="estatus" class="form-select" required>
                 <option value="">seleccionar</option>
-                <option value="">Destacado</option>
-                <option value="">Recomendado</option>
+                <option value="Destacado">Destacado</option>
+                <option value="Recomendado">Recomendado</option>
               </select>
             </div>
           </div>

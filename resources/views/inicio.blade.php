@@ -7,22 +7,11 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <title>Redimensionar imagen con Laravel 8</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('imgs/favicon.jpeg') }}">
-    <link rel="stylesheet" href="{{ asset('css/loader.css') }}"> 
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/notification.css') }}">
   </head>
   <body>
 
-    <!--loader -->
-    <div id="loader">
-      <div class="preloader"></div>
-      <div class="loadBar">
-        <div class="progress"></div>
-      </div>
-    </div>
-
-
-<div id="page" class="hidden">
 
   <!---mensaje -->
   @if ( session('msjInmueble') )
@@ -43,7 +32,7 @@
 
 
 
-  <div class="container" style="background-color: #fff !important;">
+<div class="container" style="background-color: #fff !important;">
     <h1 class="mb-5 mb-3 text-center mi-wold">Redimencionar imágen con Laravel 8 
       <br> usando (intervention/image)
       <button type="button" style="float: right;" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Subir Inmueble</button>
@@ -56,10 +45,10 @@
 
 
 
-
+<section style="background-color: #f9f9f9 !important">
 
 @if($inmuebles->count())
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 pd-special">
 
     @foreach ($inmuebles as $inmueble)
       <div class="col mb-4  ">
@@ -119,37 +108,26 @@
     </div>
 
     @else
-    <h2 class="text-center">No hay Inmuebles</h2>
+      <h2 class="text-center">No hay Inmuebles</h2>
     @endif
+
+  </section>
+
 
     
   </div>
-</div>
-
-  
 
 <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
   $(window).load(function() {
-    var rnd = Math.random() * (1000 - 2000) + 2000;
-    $('.progress').css("animation", "loading " + rnd + "ms linear");
-    console.log(rnd);
-    
-    setTimeout(function() {
-      $('#loader').hide();
-      $('#page').removeClass('hidden');
-    }, rnd);
-    });
-
-    
     $('.close-icon').click(function(){
       $('.wrapper').addClass('hide');
     }); 
-
     setTimeout(()=>{ 
       $('.wrapper').addClass('hide');
     }, 5000);
+  }); 
 </script>
 
   </body>

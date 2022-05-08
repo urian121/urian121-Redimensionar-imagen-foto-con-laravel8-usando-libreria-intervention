@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-04-2022 a las 03:23:47
+-- Tiempo de generación: 08-05-2022 a las 04:18:48
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -47,13 +47,13 @@ CREATE TABLE `inmuebles` (
 --
 
 INSERT INTO `inmuebles` (`id`, `tipo_inmueble`, `direccion`, `precio`, `numero_habitacion`, `numero_bano`, `numero_area`, `codigo`, `foto`, `estatus`, `created_at`, `updated_at`) VALUES
-(1, 'Apartamento', 'Bogota', 5345345, 3, 11, 545345, 426, '1650838118_0.jfif', 'Destacado', '2022-04-25 03:08:38', '2022-04-25 03:08:38'),
-(2, 'Casa', 'Bogotá', 150000, 3, 11, 120, 7061, '1650838160_2.PNG', 'Recomendado', '2022-04-25 03:09:20', '2022-04-25 03:09:20'),
-(3, 'Casa', 'Bogotá', 150000, 3, 11, 120, 7061, '1650838297_2.PNG', 'Destacado', '2022-04-25 03:11:37', '2022-04-25 03:11:37'),
-(4, 'Casa', 'Suba', 85000, 1, 11, 80, 9217, '1650838333_28.jpg', 'Recomendado', '2022-04-25 03:12:13', '2022-04-25 03:12:13'),
-(5, 'Casa', 'Suba', 85000, 1, 11, 80, 9217, '1650838597_28.jpg', 'Destacado', '2022-04-25 03:16:37', '2022-04-25 03:16:37'),
-(6, 'Casa', 'Suba', 85000, 1, 11, 80, 9217, '1650838870_28.jpg', 'Recomendado', '2022-04-25 03:21:10', '2022-04-25 03:21:10'),
-(7, 'Finca', 'ewr', 432, 2, 11, 43, 7269, '1650840677_26.jpg', 'Destacado', '2022-04-25 03:51:17', '2022-04-25 03:51:17');
+(1, 'Casa Campestre', 'Suba', 560000000, 4, 3, 120, 1304, '1651975552.jpg', 'Destacado', '2022-05-08 07:05:52', '2022-05-08 07:05:52'),
+(2, 'Apartamento', 'Bogotá', 350000000, 3, 2, 190, 6270, '1651975602.jpg', 'Recomendado', '2022-05-08 07:06:48', '2022-05-08 07:06:48'),
+(3, 'Apartamento', 'Cali', 290000000, 3, 2, 180, 3859, '1651975662.jpeg', 'Destacado', '2022-05-08 07:07:43', '2022-05-08 07:07:43'),
+(4, 'Lote', 'Bogotá', 460000000, 1, 2, 530, 8204, '1651975778.jpg', 'Recomendado', '2022-05-08 07:09:38', '2022-05-08 07:09:38'),
+(5, 'Apartamento', 'Fontibón', 810000000, 3, 2, 230, 4692, '1651975847.jpeg', 'Destacado', '2022-05-08 07:10:47', '2022-05-08 07:10:47'),
+(7, 'Apartamento', 'Bogotá', 980000000, 4, 3, 300, 4685, '1651976056.webp', 'Recomendado', '2022-05-08 07:14:16', '2022-05-08 07:14:16'),
+(8, 'Apartamento', 'Suba', 190000000, 1, 1, 100, 8452, '1651976126.PNG', 'Recomendado', '2022-05-08 07:15:27', '2022-05-08 07:15:27');
 
 --
 -- Índices para tablas volcadas
@@ -73,7 +73,7 @@ ALTER TABLE `inmuebles`
 -- AUTO_INCREMENT de la tabla `inmuebles`
 --
 ALTER TABLE `inmuebles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
