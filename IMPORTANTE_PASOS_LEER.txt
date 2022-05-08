@@ -1,25 +1,40 @@
+:::: PASOS PARA CREAR EL PROYECTO DESDE CERO :::
 
-1. Creamos el proyecto con la versión 8 de Laravel:
+1. Creamos el proyecto con la versión 8 de Laravel totalmente opcional la versión:
     - composer create-project laravel/laravel="8.*" redimensionar_imagen_laravel8
+
 2. Corremos el proyecto:
     - php artisan serve
-3. Creamos la bd en PhpMyadmin y configuramos la variables de entorno en el archivo .env el cual se encuentra en el 
-    home de nuestra aplicación que se acaba de crear.
-4. Corremos nuestra migración: php artisan migrate
-5. Volvemos a correr la aplicación con: php artisan serve
-6. Crearemos un Modelo, una Migración y un Controlador, donde estará por asi decirlo
-    nuestro CRUD de subir información de un inmueble que obvio tendra una foto la cual
-    vamos a redimensionar, todo esto usando el comando:
+
+3. Creamos la BD en el gestor de BD PhpMyadmin y configuramos las variables de entorno en el archivo .env 
+    el cual se encuentra en el home de nuestra aplicación que se acaba de crear.
+
+4. Corremos nuestra migración: 
+    - php artisan migrate
+
+5. Volvemos a correr la aplicación con: 
+    - php artisan serve
+
+6. Crearemos un Modelo, una Migración y un Controlador, donde estará, por asi decirlonuestro CRUD 
+    de subir información de un inmueble, obvio tendra una foto la cual vamos a redimensionar,
+    todo esto usando el comando:
     - php artisan make:model Inmueble -mcr 
 
 7. Modificamos la migración creada, agregando los campos necesarios
-8. Agregamos los campos del formulario en el Modelos que estrán bajo la variable protected $fillable = ['x','y'...]
-9. Subir la nueva Migración con: php artisan migrate
-10. Modificamos el Controllador antes creado el cual recibirá el formulario más la imagen que queremos Redimensionar.
 
-11. IMPORTANTE: Debemos usar la libreria (biblioteca) llamada 'intervention/image' la cual esta disponible para el Framework, la 
-    misma es la que nos permitira redimensionar cualquier imagen de forma facil.
-12. Intalamos la liberia antes mencionada asi: composer require intervention/image
+8. Agregamos los campos del formulario en el Modelos que estrán bajo la variable protected $fillable = ['x','y'...]
+
+9. Subir la nueva Migración con: 
+    - php artisan migrate
+
+10. Modificamos el Controllador antes creado el cual recibirá el formulario más la imágen que queremos Redimensionar.
+
+11. IMPORTANTE: Debemos usar la libreria (biblioteca) llamada 'intervention/image' la cual esta disponible 
+    para PHP y el Framework de Laravel, con la misma vamos a poder redimensionar cualquier imágen de forma fácil.
+
+12. Instalamos la liberia antes mencionada asi: 
+    - composer require intervention/image
+
 13. IMPORTANTE: luego de instalar la libreria debemos hacer una pequeña configuración para que todo funcione excelente,
     vamos abrir el archivo que esta en config/app.php y agreguamos las siguientes líneas:
     return [
@@ -36,13 +51,13 @@
     ]
 ]
 
-14. Importante ya en el controlador donde vamos a requerir hacer uso de la libreria 
+14. Importante, ya en el controlador donde vamos a requerir hacer uso de la libreria 
     se de hacer instancia (namespace) de la misma asi;
     use Intervention\Image\ImageManagerStatic as Image;
 
 
 
-PASOS PARA CREAR PROYECTO EXISTENTE CON LARAVEL 8
+::: PASOS PARA CORRER PROYECTO EXISTENTE CON LARAVEL 8 :::
 
 1. Configurar BD en archivo .env
 2. Crear BD en PhpMyAdmin
@@ -51,3 +66,5 @@ PASOS PARA CREAR PROYECTO EXISTENTE CON LARAVEL 8
 5. php artisan key:generate
 6. Correr las migraciones: php artisan migrate
 7. php artisan serve
+8. Opcional: Luego de correr las migraciones puedes borrar la tabla 'inmuebles' he importalar de nuevo 
+    pero con registros ya existente, existe una copia en la carpeta 'BD' solo hay que importarla.
