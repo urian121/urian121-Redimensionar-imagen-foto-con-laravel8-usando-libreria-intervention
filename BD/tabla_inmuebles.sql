@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-05-2022 a las 04:18:48
+-- Tiempo de generación: 10-05-2022 a las 04:13:47
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -53,7 +53,9 @@ INSERT INTO `inmuebles` (`id`, `tipo_inmueble`, `direccion`, `precio`, `numero_h
 (4, 'Lote', 'Bogotá', 460000000, 1, 2, 530, 8204, '1651975778.jpg', 'Recomendado', '2022-05-08 07:09:38', '2022-05-08 07:09:38'),
 (5, 'Apartamento', 'Fontibón', 810000000, 3, 2, 230, 4692, '1651975847.jpeg', 'Destacado', '2022-05-08 07:10:47', '2022-05-08 07:10:47'),
 (7, 'Apartamento', 'Bogotá', 980000000, 4, 3, 300, 4685, '1651976056.webp', 'Recomendado', '2022-05-08 07:14:16', '2022-05-08 07:14:16'),
-(8, 'Apartamento', 'Suba', 190000000, 1, 1, 100, 8452, '1651976126.PNG', 'Recomendado', '2022-05-08 07:15:27', '2022-05-08 07:15:27');
+(8, 'Apartamento', 'Suba', 190000000, 1, 1, 100, 8452, '1651976126.PNG', 'Recomendado', '2022-05-08 07:15:27', '2022-05-08 07:15:27'),
+(11, 'Casa', 'Bogotá', 450000000, 3, 2, 230, 6380, '1652147636.jpg', 'Recomendado', '2022-05-10 06:53:56', '2022-05-10 06:53:56'),
+(12, 'Finca', 'Bogotá', 120000000, 5, 2, 34, 7623, '1652147714.jpg', 'Destacado', '2022-05-10 06:55:15', '2022-05-10 06:55:15');
 
 --
 -- Índices para tablas volcadas
@@ -73,7 +75,7 @@ ALTER TABLE `inmuebles`
 -- AUTO_INCREMENT de la tabla `inmuebles`
 --
 ALTER TABLE `inmuebles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

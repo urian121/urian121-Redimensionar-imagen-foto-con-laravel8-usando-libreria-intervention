@@ -17,20 +17,19 @@ class InmuebleController extends Controller
     }
 
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         if ($request->hasFile('foto')) {
-        $photo              = $request->file('foto');
-        $nombrearchivo      = time() . '.' . $photo->getClientOriginalExtension();
+            $photo              = $request->file('foto');
+            $nombrearchivo      = time() . '.' . $photo->getClientOriginalExtension();
 
-        $destinationPath = public_path('/fotos_inmuebles');
-        if (!File::isDirectory($destinationPath)) {
-            File::makeDirectory($destinationPath, 0777, true, true);
-        }
+            $destinationPath = public_path('/fotos_inmuebles');
+            if (!File::isDirectory($destinationPath)) {
+                File::makeDirectory($destinationPath, 0777, true, true);
+            }
 
-        $thumb_img = Image::make($photo->getRealPath())->resize(600, 400);
-        $thumb_img->save($destinationPath .'/'. $nombrearchivo, 100); 
-    
+            $thumb_img = Image::make($photo->getRealPath())->resize(600, 400);
+            $thumb_img->save($destinationPath .'/'. $nombrearchivo, 100); 
+        
 
             $data = new Inmueble([
                 'tipo_inmueble'=>$request->get('tipo_inmueble'),

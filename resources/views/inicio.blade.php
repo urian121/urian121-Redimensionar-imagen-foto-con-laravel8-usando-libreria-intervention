@@ -51,10 +51,9 @@
     <div class="row row-cols-1 row-cols-md-3 g-4 pd-special">
 
     @foreach ($inmuebles as $inmueble)
-      <div class="col mb-4  ">
+      <div class="col-md-4 mb-4  ">
         <div class="card">
 
-          
           @if ($inmueble->estatus == 'Destacado')
           <div class="offer-type-wrap" id="etiquetaDestacado">
             <span class="offer-type bg-danger">
@@ -71,7 +70,7 @@
 
           <img src="fotos_inmuebles/{{ $inmueble->foto }}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Casa</h5>
+            <h5 class="card-title">{{ $inmueble->tipo_inmueble }}</h5>
             <p style="color:#5a534d !important;">{{ $inmueble->direccion }}</p>
             <strong class="property-price text-primary mb-3 d-block color-primario">
               ${{ $inmueble->precio }}       
